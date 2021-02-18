@@ -4,7 +4,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   button {
-    background: transparent;
+    background: #fff;
     border: none;
     border: 2px solid rgb(65, 65, 65);
     cursor: pointer;
@@ -18,6 +18,14 @@ nav {
 
     svg {
       padding-left: 0.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    button {
+      z-index: 10;
     }
   }
 }

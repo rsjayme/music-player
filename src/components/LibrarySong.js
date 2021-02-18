@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const LibrarySong = ({
   audioRef,
@@ -9,27 +9,8 @@ const LibrarySong = ({
   setCurrentSong,
   isPlaying,
 }) => {
-  useEffect(() => {
-    if (isPlaying) {
-      const playPromise = audioRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.then((audio) => {
-          audioRef.current.play();
-        });
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentSong]);
-
-  const songSelectHandler = () => {
-    setCurrentSong(song);
-    const newSongs = songs.map((songState) => {
-      if (songState.id === song.id) songState.active = true;
-      else songState.active = false;
-
-      return songState;
-    });
-    setSongs(newSongs);
+  const songSelectHandler = async () => {
+    await setCurrentSong(song);
   };
 
   return (
