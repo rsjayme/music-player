@@ -65,7 +65,7 @@ function chillHop() {
       name: 'Jazz Cabbage',
       cover:
         'https://chillhop.com/wp-content/uploads/2020/06/49f6e32ca521fbad46a1b281e3893cf6254bf11d-1024x1024.jpg',
-      artitst: 'Ian Ewing, Strehlow',
+      artist: 'Ian Ewing, Strehlow',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=9363',
       color: ['#BA4A46', '#FDF0DD'],
       id: uuidv4(),
@@ -75,7 +75,7 @@ function chillHop() {
       name: 'Doin It',
       cover:
         'https://chillhop.com/wp-content/uploads/2020/07/97781364b9aa2c2896642b5f896761e07fd9894e-1024x1024.jpg',
-      artitst: 'Tesk',
+      artist: 'Tesk',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=8927',
       color: ['#B0ACAB', '##877768'],
       id: uuidv4(),
