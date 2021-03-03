@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { FaPlay, FaPause, FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { PlayerContext } from '../contexts/PlayerContext';
 
-const Player = ({
-  isPlaying,
-  setIsPlaying,
-  currentSong,
-  setCurrentSong,
-  audioRef,
-  songs,
-  setSongs,
-}) => {
+const Player = () => {
+  const {
+    isPlaying,
+    setIsPlaying,
+    currentSong,
+    setCurrentSong,
+    audioRef,
+    songs,
+    setSongs,
+  } = useContext(PlayerContext);
   //UseEffect
 
   // Update selected song on Library list

@@ -1,30 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PlayerContext } from '../contexts/PlayerContext';
 
 import LibrarySong from './LibrarySong';
 
-const Library = ({
-  songs,
-  setSongs,
-  currentSong,
-  setCurrentSong,
-  audioRef,
-  isPlaying,
-  libraryStatus,
-}) => {
+const Library = () => {
+  const { libraryStatus, setCurrentSong, songs } = useContext(PlayerContext);
   return (
     <div className={`library ${libraryStatus ? 'active-library' : ''}`}>
       <h2>Library</h2>
       <div className="library-songs">
         {songs.map((song) => (
           <LibrarySong
-            setCurrentSong={setCurrentSong}
-            currentSong={currentSong}
             key={song.id}
-            songs={songs}
+            setCurrentSong={setCurrentSong}
             song={song}
-            audioRef={audioRef}
-            isPlaying={isPlaying}
-            setSongs={setSongs}
           />
         ))}
       </div>

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaMusic } from 'react-icons/fa';
+import { PlayerContext } from '../contexts/PlayerContext';
 
-const Nav = ({ libraryStatus, setLibraryStatus }) => {
+const Nav = () => {
+  const { libraryStatus, setLibraryStatus } = useContext(PlayerContext);
   return (
     <nav>
       <h1>Waves</h1>

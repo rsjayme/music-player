@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PlayerContext } from '../contexts/PlayerContext';
 
-const Song = ({ currentSong }) => {
+const Song = () => {
+  const { currentSong } = useContext(PlayerContext);
   return (
     <div className="song-container">
       <img src={currentSong.cover} alt="album cover" />
